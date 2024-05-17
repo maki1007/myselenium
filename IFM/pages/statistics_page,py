@@ -1,0 +1,7 @@
+from .base_page import BasePage
+from .locators import StatisticsPageLocators
+
+class StatisticsPage(BasePage):
+    def go_to_statistics_filters(self):
+        statistics_filters = self.browser.find_element(*MainPageLocators.STATISTICS)
+        statistics_filters.click()
